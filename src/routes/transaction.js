@@ -5,8 +5,11 @@ import { createTransaction,
         deletebyid,
         getsummary} from "../controller/transactioncontroller.js";
 const router = new Router()
-router.get("/:user_id",gettransactionbyid);
-router.post("/",createTransaction );
-router.delete("/:id",deletebyid);
-router.get("/:user_id", getsummary);
+
+router.get("/:user_id", gettransactionbyid);
+router.get("/summary/:user_id", getsummary);
+router.post("/", createTransaction);
+router.delete("/:id", deletebyid);
+
 export default router;
+
